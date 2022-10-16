@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.4;
 
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
@@ -50,11 +50,11 @@ contract token_rate {
         (int256 firstAnswer, uint8 firstOracleDecimals) = getRateFromOracle(firstTokenAddress);
         (int256 secondAnswer, uint8 secondOracleDecimals) = getRateFromOracle(secondTokenAddress);
 
-        uint8 firstTokenDecimals = IERC20Metadata(firstTokenAddress).decimals();
-        uint8 secondTokenDecimals = IERC20Metadata(secondTokenAddress).decimals();
+        //uint8 firstTokenDecimals = IERC20Metadata(firstTokenAddress).decimals();
+        //uint8 secondTokenDecimals = IERC20Metadata(secondTokenAddress).decimals();
 
-        return (uint256(firstAnswer) * (10 ** (secondOracleDecimals + secondTokenDecimals)),
-            uint256(secondAnswer) * (10 ** (firstOracleDecimals + firstTokenDecimals)));
+        return (uint256(firstAnswer) * (10 ** (secondOracleDecimals)),
+            uint256(secondAnswer) * (10 ** (firstOracleDecimals)));
     }
 
     modifier onlyOwner(){

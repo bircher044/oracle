@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\38050\\Projects\\oracle\\contracts\\token_rate.sol": {
-      "lastModificationDate": 1665928637590,
+      "lastModificationDate": 1666020213788,
       "contentHash": "d4936d18b4dd13e77bd268c2ea4fd7d0",
       "sourceName": "contracts/token_rate.sol",
       "solcConfig": {
@@ -77,7 +77,7 @@
       ]
     },
     "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@chainlink\\contracts\\src\\v0.8\\interfaces\\AggregatorV3Interface.sol": {
-      "lastModificationDate": 1665752655595,
+      "lastModificationDate": 1665870449247,
       "contentHash": "d9654a0fc044a31d4106ee6bca772add",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
       "solcConfig": {

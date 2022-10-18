@@ -29,14 +29,6 @@ describe("token_rate contract", async () => {
 
     });
 
-    describe('Deployment', async () => {
-
-        it('Should set the right owner', async () => {
-            expect(await token_rate.owner()).to.equal(await token_rate.owner()); //!!!!!!!!!!!!
-        });
-
-    });
-
     describe('set, remove & get oracle functions', async () => {
 
         let tokenAddress = "0x07865c6e87b9f70255377e024ace6630c1eaa37f";

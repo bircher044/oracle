@@ -9,6 +9,7 @@ const chainlinkContractAddress = "0xAb5c49580294Aff77670F839ea425f5b78ab3Ae7";
 const pairTokenContractAddress = "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6";
 
 const main = async () => {
+
   const [signer] = await ethers.getSigners();
 
   const tokenRate = TokenRate__factory.connect(tokenRateContractAddress, signer);
@@ -20,6 +21,7 @@ const main = async () => {
 
   const result = await tokenRate.calculateTokenRate(tokenContractAddress, pairTokenContractAddress);
   console.log((result[0]).div(result[1]).toString());
+  
 };
 
 main();

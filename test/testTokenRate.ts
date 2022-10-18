@@ -59,7 +59,7 @@ describe("TokenRate contract", async () => {
 
         });
 
-        it('Should reverten a transaction, when not owner is trying to set oracle', async () => {
+        it('Should revert a transaction, when not owner is trying to set an oracle', async () => {
 
             await expect( (tokenRate.connect(anotherUser).setOracle(tokenAddress, oracleAddress))).to.be.revertedWith("Ownable: caller is not the owner");
 
@@ -75,7 +75,7 @@ describe("TokenRate contract", async () => {
 
         });
 
-        it('Should reverten a transaction, when not an owner is trying to remove oracle', async () => {
+        it('Should revert a transaction, when not an owner is trying to remove oracle', async () => {
 
             await tokenRate.setOracle(tokenAddress, oracleAddress);
             expect(await tokenRate.getOracle(tokenAddress)).to.equal(oracleAddress);

@@ -1,10 +1,92 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\38050\\Projects\\oracle\\contracts\\token_rate.sol": {
-      "lastModificationDate": 1666020213788,
-      "contentHash": "d4936d18b4dd13e77bd268c2ea4fd7d0",
-      "sourceName": "contracts/token_rate.sol",
+    "C:\\Users\\38050\\Projects\\oracle\\contracts\\oracleETH.sol": {
+      "lastModificationDate": 1666052495401,
+      "contentHash": "9140bc21ee8dd32b5eab86ed48f79268",
+      "sourceName": "contracts/oracleETH.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "AccessControllerInterface",
+        "AggregatorInterface",
+        "AggregatorProxyETH",
+        "AggregatorV2V3Interface",
+        "AggregatorV3Interface",
+        "EACAggregatorProxy",
+        "Owned"
+      ]
+    },
+    "C:\\Users\\38050\\Projects\\oracle\\contracts\\oracleUSDC.sol": {
+      "lastModificationDate": 1666052496240,
+      "contentHash": "384773a7651bdb299bd8f98c8fa2b7a1",
+      "sourceName": "contracts/oracleUSDC.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "AccessControllerInterface",
+        "AggregatorInterface",
+        "AggregatorProxyUSDC",
+        "AggregatorV2V3Interface",
+        "AggregatorV3Interface",
+        "EACAggregatorProxy",
+        "Owned"
+      ]
+    },
+    "C:\\Users\\38050\\Projects\\oracle\\contracts\\TokenRate.sol": {
+      "lastModificationDate": 1666052490713,
+      "contentHash": "85293ef06a84b63e1ebf9fe220c16d35",
+      "sourceName": "contracts/TokenRate.sol",
       "solcConfig": {
         "version": "0.8.4",
         "settings": {
@@ -36,7 +118,42 @@
         "^0.8.4"
       ],
       "artifacts": [
-        "token_rate"
+        "TokenRate"
+      ]
+    },
+    "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@chainlink\\contracts\\src\\v0.8\\interfaces\\AggregatorV3Interface.sol": {
+      "lastModificationDate": 1665870449247,
+      "contentHash": "d9654a0fc044a31d4106ee6bca772add",
+      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AggregatorV3Interface"
       ]
     },
     "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
@@ -74,41 +191,6 @@
       ],
       "artifacts": [
         "IERC20Metadata"
-      ]
-    },
-    "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@chainlink\\contracts\\src\\v0.8\\interfaces\\AggregatorV3Interface.sol": {
-      "lastModificationDate": 1665870449247,
-      "contentHash": "d9654a0fc044a31d4106ee6bca772add",
-      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
-      "solcConfig": {
-        "version": "0.8.4",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AggregatorV3Interface"
       ]
     },
     "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {

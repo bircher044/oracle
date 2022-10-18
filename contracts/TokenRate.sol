@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 
-contract token_rate {
+contract TokenRate {
     address payable public owner;
 
     mapping (address => address) oracles;
@@ -29,16 +29,13 @@ contract token_rate {
     }
 
     function getRateFromOracle(address tokenAddress) public view returns (int256, uint8) {
-        
         require(oracles[tokenAddress] != address(0), "not available");
-        
         AggregatorV3Interface oracle = AggregatorV3Interface(oracles[tokenAddress]);
 
         (, int256 answer,,,) = oracle.latestRoundData();
     
         uint8 oracleDecimals = oracle.decimals();
 
-        require(answer > 0, "price error");
         return (answer, oracleDecimals);
     }
 
@@ -49,9 +46,6 @@ contract token_rate {
 
         (int256 firstAnswer, uint8 firstOracleDecimals) = getRateFromOracle(firstTokenAddress);
         (int256 secondAnswer, uint8 secondOracleDecimals) = getRateFromOracle(secondTokenAddress);
-
-        //uint8 firstTokenDecimals = IERC20Metadata(firstTokenAddress).decimals();
-        //uint8 secondTokenDecimals = IERC20Metadata(secondTokenAddress).decimals();
 
         return (uint256(firstAnswer) * (10 ** (secondOracleDecimals)),
             uint256(secondAnswer) * (10 ** (firstOracleDecimals)));

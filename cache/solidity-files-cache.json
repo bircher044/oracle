@@ -84,8 +84,8 @@
       ]
     },
     "C:\\Users\\38050\\Projects\\oracle\\contracts\\TokenRate.sol": {
-      "lastModificationDate": 1666052490713,
-      "contentHash": "85293ef06a84b63e1ebf9fe220c16d35",
+      "lastModificationDate": 1666089308207,
+      "contentHash": "6323667ce8e44a2440348f4bc5a86177",
       "sourceName": "contracts/TokenRate.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -112,7 +112,8 @@
       },
       "imports": [
         "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol",
-        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol"
+        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
       ],
       "versionPragmas": [
         "^0.8.4"
@@ -156,6 +157,43 @@
         "AggregatorV3Interface"
       ]
     },
+    "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1665752654154,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
     "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\extensions\\IERC20Metadata.sol": {
       "lastModificationDate": 1665752653940,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
@@ -191,6 +229,41 @@
       ],
       "artifacts": [
         "IERC20Metadata"
+      ]
+    },
+    "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1665752653141,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
       ]
     },
     "C:\\Users\\38050\\Projects\\oracle\\node_modules\\@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol": {

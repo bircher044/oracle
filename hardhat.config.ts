@@ -4,6 +4,8 @@ import * as dotenv from 'dotenv';
 import '@typechain/hardhat';
 import '@nomiclabs/hardhat-ethers';
 import '@nomiclabs/hardhat-waffle';
+import '@nomiclabs/hardhat-etherscan';
+
 dotenv.config();
 
 export default {
@@ -20,6 +22,8 @@ export default {
     localhost: {
       chainId: 1337
     }
-  
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY
   }
 };

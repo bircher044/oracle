@@ -3,16 +3,16 @@ pragma solidity ^0.8.4;
 
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract TokenRate {
-    address payable public owner;
+contract TokenRate is Ownable {
 
     mapping (address => address) oracles;
 
     event Withdrawal(uint amount, uint when);
 
     constructor() payable {
-        owner = payable(msg.sender);
+        transferOwnership(msg.sender);
     }
 
     function setOracle(address token_, address oracle_) public onlyOwner {
@@ -20,7 +20,7 @@ contract TokenRate {
     }
 
     function removeOracle(address token_) public onlyOwner {
-        require(oracles[token_] != address(0x0), "already removed or never existed");
+        require(oracles[token_] != address(0x0), "TokenRate: already removed or never existed");
             oracles[token_] = address(0x0);
     }
 
@@ -29,7 +29,7 @@ contract TokenRate {
     }
 
     function getRateFromOracle(address tokenAddress) public view returns (int256, uint8) {
-        require(oracles[tokenAddress] != address(0), "not available");
+        require(oracles[tokenAddress] != address(0), "TokenRate: not available");
         AggregatorV3Interface oracle = AggregatorV3Interface(oracles[tokenAddress]);
 
         (, int256 answer,,,) = oracle.latestRoundData();
@@ -51,8 +51,4 @@ contract TokenRate {
             uint256(secondAnswer) * (10 ** (firstOracleDecimals)));
     }
 
-    modifier onlyOwner(){
-        require(msg.sender == owner);
-        _;
-    }
 }
